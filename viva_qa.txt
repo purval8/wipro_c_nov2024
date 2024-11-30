@@ -1,0 +1,28 @@
+1. What is the size of the DT short unsigned int
+
+Size of the short unsigned int: The size of short unsigned int in C is typically 2 bytes (16 bits).
+ However, the exact size can vary depending on the system and compiler being used. You can use the sizeof
+ () function to confirm the size on your specific platform.
+
+2.Is C programming Modular? How do you implement it? 
+
+Yes, C programming is modular. This is achieved by
+dividing the program into smaller, self-contained functions. These functions can be written in 
+separate files (source files). To implement modularity in C:
+Use Functions: Break your program into smaller functions, each performing a specific task.
+Use Header Files: Define function prototypes and constants in header files (.h), and include these headers in the respective source files.
+Use Separate Source Files: Organize your code by putting different functions in separate .c files, which are then compiled together into a single program.
+
+3. What is an object file?
+
+An object file is a file produced by the compiler after it processes the source code. It contains machine code,
+which is not yet linked into a complete executable program. The file usually has a .o (Unix) or .obj
+(Windows) extension. Object files are later linked together by the linker to create the final executable.
+
+4. When does the Interpretation happens in C?
+5. What do you mean Data binding ?
+6. What is the prototype of strlen()
+7. What is the alternative to the -> operator ?
+8. Give 2 differences between Array and structure?
+9. Give 2 similarites between Array and DS.
+10. What is efficiency of Binary Search ?
