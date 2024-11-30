@@ -1,19 +1,19 @@
-//1. Find the sum of the elements of an Array using a recursive function (Array)
 #include <stdio.h>
 
-double findSum(double arr[], int n) {
-    
+// Function to find the sum of elements in an array recursively
+int sumArray(int arr[], int n) {
+    // Base case: if the array is empty (no more elements to add)
     if (n <= 0) {
         return 0;
     }
-    
-    return arr[n - 1] + findSum(arr, n - 1);
+    // Recursive case: sum the current element and the sum of the rest of the array
+    return arr[n - 1] + sumArray(arr, n - 1);
 }
 
 int main() {
-    double arr[] = {1.5, 2.5, 3.5, 4.5};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    double sum = findSum(arr, n);
-    printf("Sum of the array elements: %.2lf\n", sum);
+    int arr[] = {1, 2, 3, 4, 5};  // Sample array
+    int n = sizeof(arr) / sizeof(arr[0]);  // Number of elements in the array
+    int result = sumArray(arr, n);  // Calling the recursive function
+    printf("Sum of the elements in the array: %d\n", result);
     return 0;
 }
