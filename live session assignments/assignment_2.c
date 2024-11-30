@@ -1,4 +1,4 @@
-14.Check if a number is perfect square
+/*//14.Check if a number is perfect square
 #include <stdio.h>
 
 int main() {
@@ -19,8 +19,8 @@ int main() {
     }
 
     return 0;
----------------------------------------------------------------------------------------
-15.Check if a character is an alphabet
+//---------------------------------------------------------------------------------------
+//15.Check if a character is an alphabet
 #include <stdio.h>
 
 int main() {
@@ -39,8 +39,8 @@ int main() {
 
     return 0;
 }
-----------------------------------------------------------------------------------
-16.Check if a character is an alphanumeric
+//----------------------------------------------------------------------------------
+//16.Check if a character is an alphanumeric
 
 #include <stdio.h>
 #include <ctype.h>  // For isalnum() function
@@ -61,8 +61,8 @@ int main() {
 
     return 0;
 }
-------------------------------------------------------------------------------------
-17.Check if a character is a digit
+//------------------------------------------------------------------------------------
+//17.Check if a character is a digit
 
 #include <stdio.h>
 #include <ctype.h>  // For isdigit() function
@@ -83,8 +83,8 @@ int main() {
 
     return 0;
 }
------------------------------------------------------------------------------------
-18.Check if a letter is small case
+//-----------------------------------------------------------------------------------
+//18.Check if a letter is small case
 
 #include <stdio.h>
 #include <ctype.h>  // For islower() function
@@ -105,8 +105,8 @@ int main() {
 
     return 0;
 }
--------------------------------------------------------------------------------------------
-19.Check if a year is Leap year
+//-------------------------------------------------------------------------------------------
+//19.Check if a year is Leap year
 
 #include <stdio.h>
 
@@ -126,7 +126,7 @@ int main() {
 
     return 0;
 }
-------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------
 20. Declare 3 character variables and accept values, raining=r sunny=s cloudy=c
 Allow the person to go out only if it is:
 	1. only sunny
@@ -155,3 +155,4 @@ int main() {
 
     return 0;
 }
+*/

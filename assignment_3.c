@@ -1,4 +1,4 @@
-p29
+/*p29
 FARMER PROBLEM STATEMENT
 
 Mahesh is a farmer and owns 80 acres of land. His land is equally divided into 5 segments. He grows tomatoes in the 1st segment, potatoes in the 2nd segment, cabbage in the 3rd segment, sunflower in the 4th segment and sugarcane in the 5th segment.
@@ -33,10 +33,10 @@ sunflower_yeild_tonnes = each_segment * 0.7
 sunflower_sales_amount = int(sunflower_yeild_tonnes * 1000 * 200)
 
 sugarcane_yeild_tonnes = each_segment * 45
-sugarcane_sales_amount = sugarcane_yeild_tonnes * 4000
+sugarcane_sales_amount = sugarcane_yeild_tonnes * 4000 
 ---------------------------------------------------------------------
-p31
-Find sum of Odd digits in a number
+//p31
+//Find sum of Odd digits in a number
 #include <stdio.h>
 
 int main() {
@@ -58,9 +58,9 @@ int main() {
     return 0;
 }
 
-----------------------------------------------------------------
-p32
-Check if a number is Palindrome
+//----------------------------------------------------------------
+//p32
+//Check if a number is Palindrome
 #include <stdio.h>
 
 int main() {
@@ -85,9 +85,9 @@ int main() {
 
     return 0;
 }
--------------------------------------------------------------------------
+//-------------------------------------------------------------------------
 
-Find sum of Odd placed Odd digits in a number
+//Find sum of Odd placed Odd digits in a number
 
 #include <stdio.h>
 
@@ -112,8 +112,8 @@ int main() {
 
     return 0;
 }
---------------------------------------------------------------
-Find sum of Even placed Even digits in a number
+//--------------------------------------------------------------
+//Find sum of Even placed Even digits in a number
 #include <stdio.h>
 
 int main() {
@@ -137,4 +137,4 @@ int main() {
 
     return 0;
 }
--------------------------------------------------------------------
+//-------------------------------------------------------------------*/
