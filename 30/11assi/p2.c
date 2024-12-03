@@ -1,17 +1,6 @@
 //Reverse the elements of an Array using a while loop (Array)
 #include <stdio.h>
-
-void reverseArray(int arr[], int n) {
-    int start = 0, end = n - 1;
-    while (start < end) {
-        // Swap elements
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-        start++;
-        end--;
-    }
-}
+#include "rev.h"
 
 int main() {
     int arr[] = {1, 2, 3, 4, 5};

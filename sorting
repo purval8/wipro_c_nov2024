@@ -1,0 +1,267 @@
+/*
+Sorting in C
+Sorting refers to the process of arranging the elements of a collection (such as an array or list) in a particular order, typically in ascending or descending order. Sorting is an important concept in computer science and is widely used in various applications such as searching algorithms, data visualization, and more.
+
+In C, sorting can be done using various sorting algorithms, each with its own time complexity and performance characteristics. Some of the most common sorting algorithms in C include Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, and Heap Sort.
+
+Types of Sorting Orders
+Ascending Order: Elements are arranged from the smallest to the largest.
+Descending Order: Elements are arranged from the largest to the smallest.
+Common Sorting Algorithms in C
+1. Bubble Sort
+Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
+
+C Program for Bubble Sort
+c
+Copy code
+#include <stdio.h>
+
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {         // Traverse through all array elements
+        for (int j = 0; j < n-i-1; j++) {   // Last i elements are already sorted
+            if (arr[j] > arr[j+1]) {         // Swap if elements are in the wrong order
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    printf("Original array: \n");
+    printArray(arr, n);
+
+    bubbleSort(arr, n);   // Sort the array using Bubble Sort
+
+    printf("Sorted array: \n");
+    printArray(arr, n);
+
+    return 0;
+}
+Output:
+
+c
+Copy code
+Original array: 
+64 34 25 12 22 11 90 
+Sorted array: 
+11 12 22 25 34 64 90 
+Explanation of Bubble Sort:
+Bubble Sort works by comparing adjacent elements in the array and swapping them if they are in the wrong order. The process repeats for each element until the array is sorted.
+After each pass through the array, the largest element "bubbles up" to its correct position.
+Time complexity: 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ ) in the worst case.
+2. Selection Sort
+Selection Sort is an in-place comparison-based sorting algorithm. It works by repeatedly finding the minimum (or maximum) element from the unsorted portion of the array and swapping it with the element at the beginning of the unsorted portion.
+
+C Program for Selection Sort
+c
+Copy code
+#include <stdio.h>
+
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {
+        int minIndex = i;
+        for (int j = i+1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;  // Find the minimum element in unsorted part
+            }
+        }
+        // Swap the found minimum element with the first element
+        int temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp;
+    }
+}
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int arr[] = {64, 25, 12, 22, 11};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    printf("Original array: \n");
+    printArray(arr, n);
+
+    selectionSort(arr, n);   // Sort the array using Selection Sort
+
+    printf("Sorted array: \n");
+    printArray(arr, n);
+
+    return 0;
+}
+Output:
+
+c
+Copy code
+Original array: 
+64 25 12 22 11 
+Sorted array: 
+11 12 22 25 64 
+Explanation of Selection Sort:
+The algorithm selects the minimum element from the unsorted part of the array and swaps it with the first unsorted element.
+This process repeats until the entire array is sorted.
+Time complexity: 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ ).
+3. Insertion Sort
+Insertion Sort works similarly to how you might sort playing cards in your hands. It builds the sorted array one item at a time by inserting each element into its correct position.
+
+C Program for Insertion Sort
+c
+Copy code
+#include <stdio.h>
+
+void insertionSort(int arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+
+        // Move elements of arr[0..i-1] that are greater than key to one position ahead
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;  // Insert the key into its correct position
+    }
+}
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    printf("Original array: \n");
+    printArray(arr, n);
+
+    insertionSort(arr, n);   // Sort the array using Insertion Sort
+
+    printf("Sorted array: \n");
+    printArray(arr, n);
+
+    return 0;
+}
+Output:
+
+c
+Copy code
+Original array: 
+12 11 13 5 6 
+Sorted array: 
+5 6 11 12 13 
+Explanation of Insertion Sort:
+Insertion Sort builds the sorted list by taking one element at a time and inserting it into the correct position in the sorted part of the list.
+It’s more efficient than Bubble Sort or Selection Sort for small datasets.
+Time complexity: 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ ).
+Other Advanced Sorting Algorithms
+4. Merge Sort
+Merge Sort is a divide-and-conquer algorithm that divides the array into two halves, sorts each half, and then merges the sorted halves.
+
+Time Complexity: 
+𝑂
+(
+𝑛
+log
+⁡
+𝑛
+)
+O(nlogn)
+
+5. Quick Sort
+Quick Sort is also a divide-and-conquer algorithm that works by selecting a "pivot" element, partitioning the array into two halves (one with elements smaller than the pivot and one with elements larger), and recursively sorting the halves.
+
+Time Complexity: 
+𝑂
+(
+𝑛
+log
+⁡
+𝑛
+)
+O(nlogn) (average), 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ ) (worst case)
+
+6. Heap Sort
+Heap Sort converts the array into a binary heap and then repeatedly extracts the maximum or minimum element, depending on the heap type, and places it in the sorted position.
+
+Time Complexity: 
+𝑂
+(
+𝑛
+log
+⁡
+𝑛
+)
+O(nlogn)
+
+Conclusion
+Sorting is an essential operation in computer science and is widely used for many applications such as searching, data analysis, and optimization.
+In C, sorting algorithms can be implemented in different ways, depending on the type and size of data.
+The basic sorting algorithms like Bubble Sort, Selection Sort, and Insertion Sort are easy to understand and implement but have higher time complexities (
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ )).
+More efficient algorithms like Merge Sort, Quick Sort, and Heap Sort provide better performance with time complexities of 
+𝑂
+(
+𝑛
+log
+⁡
+𝑛
+)
+O(nlogn), making them suitable for large datasets.*/

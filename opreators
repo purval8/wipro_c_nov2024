@@ -1,0 +1,45 @@
+/*
+. Arithmetic Operators
+These operators are used to perform basic mathematical operations.
+
+| Operator | Description | Example | |----------|----------------------------|---------------| | + | Addition | a + b | | - | Subtraction | a - b | | * | Multiplication | a * b | | / | Division | a / b | | % | Modulus (remainder) | a % b |
+
+2. Relational Operators
+These operators are used to compare two values.
+
+| Operator | Description | Example | |----------|----------------------------|---------------| | == | Equal to | a == b | | != | Not equal to | a != b | | > | Greater than | a > b | | < | Less than | a < b | | >= | Greater than or equal to | a >= b | | <= | Less than or equal to | a <= b |
+
+3. Logical Operators
+These operators are used to perform logical operations.
+
+| Operator | Description | Example | |----------|----------------------------|---------------| | && | Logical AND | a && b | | || | Logical OR | a || b | | ! | Logical NOT | !a |
+
+4. Bitwise Operators
+These operators perform operations on bits.
+
+| Operator | Description | Example | |----------|----------------------------|---------------| | & | Bitwise AND | a & b | | | | Bitwise OR | a | b | | ^ | Bitwise XOR | a ^ b | | ~ | Bitwise NOT | ~a | | << | Left shift | a << 1 | | >> | Right shift | a >> 1 |
+
+5. Assignment Operators
+These operators are used to assign values to variables.
+
+| Operator | Description | Example | |----------|----------------------------|---------------| | = | Simple assignment | a = b | | += | Add and assign | a += b | | -= | Subtract and assign | a -= b | | *= | Multiply and assign | a *= b | | /= | Divide and assign | a /= b | | %= | Modulus and assign | a %= b | | &= | Bitwise AND and assign | a &= b | | |= | Bitwise OR and assign | a |= b | | ^= | Bitwise XOR and assign | a ^= b | | <<= | Left shift and assign | a <<= 1 | | >>= | Right shift and assign | a >>= 1 |
+
+6. Increment and Decrement Operators
+These operators are used to increase or decrease the value of a variable by 1.
+
+| Operator | Description | Example | |----------|----------------------------|---------------| | ++ | Increment | ++a or a++| | -- | Decrement | --a or a--|
+
+7. Conditional (Ternary) Operator
+This operator is a shorthand for an if-else statement.
+
+| Operator | Description | Example | |----------|----------------------------|---------------| | ? : | Ternary operator | condition ? expr1 : expr2 |
+
+8. Comma Operator
+This operator allows two expressions to be evaluated in a single statement.
+
+| Operator | Description | Example | |----------|----------------------------|---------------| | , | Comma operator | a = (b = 3, b + 2) |
+
+9. Sizeof Operator
+This operator returns the size of a data type or variable in bytes.
+
+| Operator | Description | Example | |----------|----------------------------*/
